@@ -1,0 +1,14 @@
+{% if category == "tweets"%}
+[[>]] {{ highlight_text }} ([Tweet]({{highlight_location_url}}))
+    {% if highlight_note %}
+    **Note**: {{ highlight_note | replace("save thread", "") | replace("save", "")}}
+    {% endif %}
+{% else %}
+#[[{{"Captured/Book" if category == "books"}}{{"Captured/Article" if category == "articles"}}{{"Captured/Podcast" if category == "podcasts"}}]] [[{{date}}]]
+    #[[Reference Notes]] [[{{ "Book/" if category == "books"}}{{"Article/" if category == "articles"}}{{"Tweet/" if category == "tweets"}}{{"Podcast/" if category == "podcasts"}}{{title}}]], [[{{author}}]] {% if highlight_location and highlight_location_url %} ([{{highlight_location}}]({{highlight_location_url}})){% elif highlight_location %} ({{highlight_location}}){% endif %} {% if highlight_tags %}{% for tag in highlight_tags %}#[[{{tag}}]] {% endfor %}{% endif %}
+        {{ highlight_text }} #.readwiseimport
+{% if highlight_note %}
+    #[[Literature Notes]] {{ highlight_note }}
+{% endif %}
+
+{% endif %}
