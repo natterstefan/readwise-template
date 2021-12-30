@@ -1,5 +1,7 @@
 # readwise-roam-template
 
+[![Lint](https://github.com/natterstefan/readwise-roam-template/actions/workflows/lint.yml/badge.svg)](https://github.com/natterstefan/readwise-roam-template/actions/workflows/lint.yml)
+
 ## Requirements
 
 ```bash
