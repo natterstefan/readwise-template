@@ -5,10 +5,10 @@
     {% if category == "tweet"%}Publication:: [[Twitter]]{% endif %}
     Year:: [[{{date|reverse|truncate(4,True, "")|reverse}}]]
     {% if url %}Url:: [{{author}} ({{date|reverse|truncate(4,True, "")|reverse}}), {{title}}. ({{source}})]({{url}}){% endif %}
-    Type:: {{ "#[[Book]]" if category == "books"}}{{"#[[Article]]" if category == "articles"}}{{"#[[Tweet]]" if category == "tweets"}} {{"#[[Podcast]]" if category == "podcasts"}} #[[Readwise Highlights]]
+    Type:: {{ "#[[Book]]" if category == "books"}}{{"#[[Article]]" if category == "articles"}}{{"#[[Tweet]]" if category == "tweets"}}{{"#[[Podcast]]" if category == "podcasts"}} #[[Readwise Highlights]]
     {% if category == "books" %}Reading status:: #[[Status/Reading]]{% endif %}
     {% if category == "articles" %}Reading status:: #[[Status/Read]]{% endif %}
     {% if category == "podcasts" %}Listening status:: #[[Status/Listened-To]]{% endif %}
     Source:: [[{{source}}]]
     Added through:: [[Readwise]]
-    {% if image_url %}![]({{image_url}}){% endif %}
+    {% if image_url %}![{{title}}]({{image_url}}){% endif %}

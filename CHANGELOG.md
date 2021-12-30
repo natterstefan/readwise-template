@@ -9,3 +9,4 @@ adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 ### Features
 
 - Initial setup with latest Readwise templates and GitHub workflow for linting
+- added `preview.py` script to generate a preview of the Jinja2 templates
