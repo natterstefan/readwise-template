@@ -8,7 +8,7 @@ from jinja2 import Environment, FileSystemLoader
 # setup jinja
 env = Environment(loader=FileSystemLoader('./src'))
 
-# add custom filters (actual filters are implemented by Readwise)
+# add dummy custom filters (actual filters are implemented by Readwise)
 # see https://stackoverflow.com/a/25450294/1238150
 def pluralize(input):
     """Readwise pluralize"""
