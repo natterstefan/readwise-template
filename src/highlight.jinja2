@@ -1,6 +1,6 @@
 {% if category == "tweets"%}
 [[>]] {{ highlight_text }} ([Tweet]({{highlight_location_url}}))
-    {% if highlight_note %}
+    {% if highlight_note | replace("save thread", "") | replace("save", "") %}
     **Note**: {{ highlight_note | replace("save thread", "") | replace("save", "")}}
     {% endif %}
 {% else %}
