@@ -1,20 +1,7 @@
 #!/usr/bin/env python
 
-# inspired by https://stackoverflow.com/a/37939821/1238150
 import sys
-import os
-from jinja2 import Environment, FileSystemLoader
-
-# setup jinja
-env = Environment(loader=FileSystemLoader('./src'))
-
-# add dummy custom filters (actual filters are implemented by Readwise)
-# see https://stackoverflow.com/a/25450294/1238150
-def pluralize(input):
-    """Readwise pluralize"""
-    return input
-
-env.filters['pluralize'] = pluralize
+from setup import env
 
 # files to lint
 templates = [x for x in env.list_templates() if x.endswith('.jinja2')]
